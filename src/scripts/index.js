@@ -6,6 +6,8 @@ import App from './components/App';
 import '../stylesheets/index.scss';
 
 export const init = function(el, assetRoot) {
+  alert(assetRoot);
   util.setAssetRoot(assetRoot);
+  alert(assetRoot);
   render(<App />, el);
 };

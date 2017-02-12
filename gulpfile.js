@@ -1,4 +1,4 @@
-var componentName = 'HereIsYourComponentName';
+var RESOURCE_NAME = 'app';
 
 var gulp = require('gulp');
 var zip = require('gulp-zip');
@@ -31,7 +31,7 @@ var handleErrors = function(err, callback) {
 
 gulp.task('build', ['webpack'], function() {
   return gulp.src('./build/**/*')
-  .pipe(zip(componentName + '.resource'))
+  .pipe(zip(RESOURCE_NAME + '.resource'))
   .pipe(gulp.dest('./pkg/staticresources'));
 });
 

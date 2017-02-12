@@ -7,7 +7,6 @@
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width" />
-    <apex:stylesheet value="{!URLFOR($Resource.slds, 'assets/styles/salesforce-lightning-design-system-vf.css')}"/>
   </head>
   <body>
     <div class="slds">
@@ -15,11 +14,11 @@
     </div>
 
     <script type="text/javascript">
-      window.assetRoot = '{!URLFOR($Resource.slds)}';
+      window.assetRoot = '{!URLFOR($Asset.SLDS)}';
     </script>
-    <apex:includeScript value="{!URLFOR($Resource.HereIsYourComponentName, 'bundle.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.app, 'bundle.js')}" />
     <script type="text/javascript">
-      App.init(root, '{!URLFOR($Resource.slds)}/assets', null);
+      App.init(root, '{!URLFOR($Asset.SLDS)}/assets');
     </script>
   </body>
 </html>

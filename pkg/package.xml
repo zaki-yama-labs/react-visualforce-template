@@ -5,8 +5,7 @@
         <name>ApexPage</name>
     </types>
     <types>
-        <members>HereIsYourComponentName</members>
-        <members>slds</members>
+        <members>app</members>
         <name>StaticResource</name>
     </types>
     <version>38.0</version>
