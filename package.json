@@ -39,7 +39,7 @@
     "gulp-replace": "^0.5.4",
     "gulp-zip": "^3.2.0",
     "jsforce": "^1.7.0",
-    "node-sass": "^3.10.1",
+    "node-sass": "^4.5.0",
     "run-sequence": "^1.2.2",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
