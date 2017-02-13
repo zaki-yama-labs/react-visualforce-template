@@ -1,9 +1,7 @@
-React Lightning Component Template
-----------------------------------
+React Visualforce Template
+--------------------------
 
-(For Japanese, please see [README.jp.md](README.jp.md))
-
-A template for developing Lightning Component with React.  
+A template for developing React application in Visualforce.  
 This template automates the following things:
 
 - Build JavaScript & CSS using webpack
@@ -11,43 +9,35 @@ This template automates the following things:
 - Deploy StaticResource and all other metadata to your Salesforce org
 - Watch file changes and run re-build & deploy
 
+### Stack
+
+- React
+- [react-lightning-design-system](https://github.com/mashmatrix/react-lightning-design-system)
+- gulp
+- webpack
+
 ### Installation
+
+```zsh
+$ npm install -g gulp
+$ npm install
+```
+
+### Usage
 
 First you need to rename `.env.json.sample` to `.env.json` and input your Salesforce org credentials.  
 Then run following command.
 
 ```zsh
-$ npm install
-$ npm install -g gulp
-
 # Build JS/CSS & Create StaticResource & Deploy
 $ gulp
+
+# Deploy only
+$ gulp deploy
+
+# watch changes in src/ and pkg/ directory, and deploy when updated
+$ gulp watch
 ```
-
-
-### Customization
-
-##### Rename Your Lightning Component Name
-
-The default Lightning Component name is `HereIsYourComponentName`.  
-You can rename it as you like.
-
-Please rename the following:
-
-- `componentName` variable in `gulpfile.js`
-- All directories and files under `pkg/aura` and `pkg/staticresources`
-- Inside `pkg/aura/PreviewApp/PreviewApp.app`
-- Inside `pkg/aura/HereIsYourComponentName/HereIsYourComponentName.cmp` (At `ltng:require`)
-
-##### Rename Your Library Name
-
-The default library name is `yourLibraryName`.  
-This name is used in client controller script of component.
-
-Please rename the following:
-
-- `libraryName` variable in `webpack.config.js`
-- Inside `pkg/aura/HereIsYourComponentName/HereIsYourComponentNameController.js` (Where calling `init` method)
 
 ### License
 
