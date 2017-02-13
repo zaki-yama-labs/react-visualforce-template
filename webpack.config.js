@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var libraryName = 'App';
+var LIBRARY_NAME = 'App';
 
 module.exports = {
   context: __dirname,
@@ -10,7 +10,8 @@ module.exports = {
 
   output: {
     path: __dirname + '/build',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    library: LIBRARY_NAME,
   },
   devtool: 'source-map',
   module: {
@@ -22,10 +23,6 @@ module.exports = {
         query:{
           presets: ['react', 'es2015']
         }
-      },
-      {
-        test: require.resolve('./src/scripts/index'),
-        loaders: ['expose?' + libraryName, 'babel-loader?presets[]=react,presets[]=es2015']
       },
       {
         test: /\.scss$/,
