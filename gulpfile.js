@@ -3,7 +3,7 @@ var RESOURCE_NAME = 'app';
 var gulp = require('gulp');
 var zip = require('gulp-zip');
 var notify = require('gulp-notify');
-var env = require('gulp-env');
+var env = require('node-env-file');
 var gulpif = require('gulp-if');
 var replace = require('gulp-replace');
 var through2 = require('through2');
@@ -12,9 +12,7 @@ var webpack = require('webpack-stream');
 var runSequence = require('run-sequence');
 var forceDeploy = require('gulp-jsforce-deploy');
 
-env({
-  file: '.env.json'
-});
+env('.env');
 
 // ref. https://github.com/vigetlabs/gulp-starter/blob/master/gulpfile.js/lib/handleErrors.js
 var handleErrors = function(err, callback) {
