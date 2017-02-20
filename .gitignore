@@ -3,6 +3,5 @@
 .env
 
 *.resource
-!slds.resource
 build
 node_modules

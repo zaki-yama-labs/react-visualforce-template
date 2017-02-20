@@ -6,7 +6,6 @@
     </types>
     <types>
         <members>app</members>
-        <members>slds</members>
         <name>StaticResource</name>
     </types>
     <version>38.0</version>
