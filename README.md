@@ -26,7 +26,7 @@ $ npm install
 
 ### Usage
 
-First you need to rename `.env.sample` to `.env.json` and input your Salesforce org credentials.  
+First you need to rename `.env.sample` to `.env` and input your Salesforce org credentials.  
 Then run following command.
 
 ```zsh
