@@ -48,7 +48,8 @@ gulp.task('deploy', function() {
   .pipe(zip('pkg.zip'))
   .pipe(forceDeploy({
     username: process.env.SF_USERNAME,
-    password: process.env.SF_PASSWORD
+    password: process.env.SF_PASSWORD,
+    pollTimeout: 600 * 1000
   }))
   .on('error', handleErrors);
 });
